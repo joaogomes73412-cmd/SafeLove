@@ -25,6 +25,7 @@ body {
 /* ========================= */
 
 #logosafelove {
+    display: block;
     width: 140px;
     max-width: 100%;
     margin: 0 auto 10px;
@@ -38,7 +39,7 @@ body {
 
 
 /* ========================= */
-/* TÍTULO */
+/* TÍTULO PRINCIPAL */
 /* ========================= */
 
 h1 {
@@ -52,7 +53,7 @@ h1 {
 
 
 /* ========================= */
-/* DESCRIÇÃO INICIAL */
+/* DESCRIÇÃO PRINCIPAL */
 /* ========================= */
 
 .descricaoinicial {
@@ -63,30 +64,43 @@ h1 {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
+    word-spacing: 1px;
     line-height: 1.6;
 }
 
 
 /* ========================= */
-/* CARDS */
+/* CARDS DOS TÓPICOS */
 /* ========================= */
 
 .topicoumedescricao,
 .topicodoisedescricao {
     width: 100%;
-    min-width: 0;
+    background-color: white;
 
     border: 1px solid rgba(71, 70, 71, 0.3);
     border-radius: 15px;
 
     padding: 15px;
 
-    background-color: white;
+    display: grid;
 
-    display: flex;
-    align-items: center;
+    /*
+       Coluna 1 = ícone
+       Coluna 2 = título + descrição
+    */
+    grid-template-columns: 60px 1fr;
+
+    /*
+       Linha 1 = título
+       Linha 2 = descrição
+    */
+    grid-template-rows: auto auto;
 
     column-gap: 15px;
+    row-gap: 3px;
+
+    align-items: center;
 }
 
 
@@ -105,7 +119,7 @@ h1 {
 
 
 /* ========================= */
-/* ÍCONE */
+/* ÍCONES */
 /* ========================= */
 
 .topicoumedescricao img,
@@ -113,18 +127,29 @@ h1 {
     width: 55px;
     height: 55px;
 
-    flex: 0 0 55px;
-
     object-fit: contain;
+
+    /*
+       O ícone ocupa as duas linhas:
+       título + descrição
+    */
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    display: block;
+    margin: auto;
 }
 
 
 /* ========================= */
-/* PARTE DO TEXTO */
+/* TÍTULOS */
 /* ========================= */
 
-.topicoumedescricao h2,
-.topicodoisedescricao h2 {
+.topicoum,
+.topicodois {
+    grid-column: 2;
+    grid-row: 1;
+
     margin: 0;
 
     font-size: 17px;
@@ -132,47 +157,38 @@ h1 {
     font-weight: 544;
 
     line-height: 1.3;
+
+    /*
+       Impede o título de ser espremido
+    */
+    min-width: 0;
 }
 
 
 /* ========================= */
-/* DESCRIÇÃO */
+/* DESCRIÇÕES */
 /* ========================= */
 
-.topicoumedescricao p,
-.topicodoisedescricao p {
-    margin: 4px 0 0;
+.descricaotopicoum,
+.descricaotopicodois {
+    grid-column: 2;
+    grid-row: 2;
+
+    width: 100%;
+
+    margin: 0;
 
     font-size: 15px;
-
     color: rgba(66, 66, 66, 0.6);
 
     font-family: Arial, Helvetica, sans-serif;
-
     font-weight: 300;
 
     line-height: 1.4;
 
     text-align: left;
 
-    width: 100%;
-}
-
-
-/* ========================= */
-/* IMPORTANTE */
-/* ========================= */
-
-/*
-   Junta título + descrição em uma coluna
-   ao lado do ícone.
-*/
-
-.topicoumedescricao h2,
-.topicoumedescricao p,
-.topicodoisedescricao h2,
-.topicodoisedescricao p {
-    flex-shrink: 1;
+    min-width: 0;
 }
 
 
@@ -195,9 +211,7 @@ h1 {
     cursor: pointer;
 
     font-size: 20px;
-
     font-family: Arial, Helvetica, sans-serif;
-
     font-weight: 500;
 }
 
@@ -212,7 +226,6 @@ h1 {
     );
 
     color: white;
-
     border: transparent;
 }
 
@@ -276,13 +289,12 @@ h1 {
 
 .creditos4,
 .creditos5,
-.creditos6 {
+.creditos6,
+.creditos7 {
     margin: 0 0 1px;
 }
 
 .creditos7 {
-    margin: 0 0 1px;
-
     background: linear-gradient(
         to left,
         #ee0197,
@@ -307,7 +319,7 @@ h1 {
 
 
 /* ================================= */
-/* CELULAR */
+/* CELULARES */
 /* ================================= */
 
 @media (max-width: 600px) {
@@ -337,11 +349,12 @@ h1 {
 
     .topicoumedescricao,
     .topicodoisedescricao {
-        width: 100%;
-
-        padding: 12px;
+        grid-template-columns: 50px minmax(0, 1fr);
 
         column-gap: 12px;
+        row-gap: 3px;
+
+        padding: 12px;
     }
 
 
@@ -351,23 +364,21 @@ h1 {
     .topicodoisedescricao img {
         width: 45px;
         height: 45px;
-
-        flex: 0 0 45px;
     }
 
 
     /* TÍTULOS */
 
-    .topicoumedescricao h2,
-    .topicodoisedescricao h2 {
+    .topicoum,
+    .topicodois {
         font-size: 16px;
     }
 
 
     /* DESCRIÇÕES */
 
-    .topicoumedescricao p,
-    .topicodoisedescricao p {
+    .descricaotopicoum,
+    .descricaotopicodois {
         font-size: 14px;
         line-height: 1.4;
     }
@@ -406,7 +417,7 @@ h1 {
 
 
 /* ================================= */
-/* CELULAR PEQUENO */
+/* CELULARES MUITO PEQUENOS */
 /* ================================= */
 
 @media (max-width: 380px) {
@@ -426,8 +437,11 @@ h1 {
 
     .topicoumedescricao,
     .topicodoisedescricao {
-        padding: 10px;
+        grid-template-columns: 45px minmax(0, 1fr);
+
         column-gap: 10px;
+
+        padding: 10px;
     }
 
 
@@ -435,19 +449,17 @@ h1 {
     .topicodoisedescricao img {
         width: 40px;
         height: 40px;
-
-        flex: 0 0 40px;
     }
 
 
-    .topicoumedescricao h2,
-    .topicodoisedescricao h2 {
+    .topicoum,
+    .topicodois {
         font-size: 15px;
     }
 
 
-    .topicoumedescricao p,
-    .topicodoisedescricao p {
+    .descricaotopicoum,
+    .descricaotopicodois {
         font-size: 13px;
     }
 
