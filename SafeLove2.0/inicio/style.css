@@ -25,7 +25,6 @@ body {
 /* ========================= */
 
 #logosafelove {
-    display: block;
     width: 140px;
     max-width: 100%;
     margin: 0 auto 10px;
@@ -64,18 +63,18 @@ h1 {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
-    word-spacing: 1px;
     line-height: 1.6;
 }
 
 
 /* ========================= */
-/* PRIMEIRO E SEGUNDO BLOCO */
+/* CARDS */
 /* ========================= */
 
 .topicoumedescricao,
 .topicodoisedescricao {
     width: 100%;
+    min-width: 0;
 
     border: 1px solid rgba(71, 70, 71, 0.3);
     border-radius: 15px;
@@ -84,24 +83,21 @@ h1 {
 
     background-color: white;
 
-    display: grid;
-
-    grid-template-columns: 60px minmax(0, 1fr);
+    display: flex;
+    align-items: center;
 
     column-gap: 15px;
-
-    align-items: center;
 }
 
 
-/* PRIMEIRO BLOCO */
+/* PRIMEIRO CARD */
 
 .topicoumedescricao {
     margin: 5px 0 10px;
 }
 
 
-/* SEGUNDO BLOCO */
+/* SEGUNDO CARD */
 
 .topicodoisedescricao {
     margin: 19px 0 50px;
@@ -109,7 +105,7 @@ h1 {
 
 
 /* ========================= */
-/* ÍCONES */
+/* ÍCONE */
 /* ========================= */
 
 .topicoumedescricao img,
@@ -117,32 +113,22 @@ h1 {
     width: 55px;
     height: 55px;
 
+    flex: 0 0 55px;
+
     object-fit: contain;
-
-    grid-column: 1;
-    grid-row: 1 / 3;
-
-    display: block;
-
-    margin: 0 auto;
 }
 
 
 /* ========================= */
-/* TÍTULOS DOS TÓPICOS */
+/* PARTE DO TEXTO */
 /* ========================= */
 
-.topicoum,
-.topicodois {
-    grid-column: 2;
-    grid-row: 1;
-
+.topicoumedescricao h2,
+.topicodoisedescricao h2 {
     margin: 0;
 
     font-size: 17px;
-
     font-family: Arial, Helvetica, sans-serif;
-
     font-weight: 544;
 
     line-height: 1.3;
@@ -150,17 +136,12 @@ h1 {
 
 
 /* ========================= */
-/* DESCRIÇÕES DOS TÓPICOS */
+/* DESCRIÇÃO */
 /* ========================= */
 
-.descricaotopicoum,
-.descricaotopicodois {
-    grid-column: 2;
-    grid-row: 2;
-
+.topicoumedescricao p,
+.topicodoisedescricao p {
     margin: 4px 0 0;
-
-    width: 100%;
 
     font-size: 15px;
 
@@ -173,6 +154,25 @@ h1 {
     line-height: 1.4;
 
     text-align: left;
+
+    width: 100%;
+}
+
+
+/* ========================= */
+/* IMPORTANTE */
+/* ========================= */
+
+/*
+   Junta título + descrição em uma coluna
+   ao lado do ícone.
+*/
+
+.topicoumedescricao h2,
+.topicoumedescricao p,
+.topicodoisedescricao h2,
+.topicodoisedescricao p {
+    flex-shrink: 1;
 }
 
 
@@ -259,7 +259,6 @@ h1 {
 .creditos6,
 .creditos7 {
     text-align: center;
-
     color: rgba(66, 66, 66, 0.7);
 }
 
@@ -297,9 +296,6 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
-
-/* NEGRITO DOS CRÉDITOS */
-
 .creditos b,
 .creditos2 b,
 .creditos3 b,
@@ -311,7 +307,7 @@ h1 {
 
 
 /* ================================= */
-/* CELULARES */
+/* CELULAR */
 /* ================================= */
 
 @media (max-width: 600px) {
@@ -334,19 +330,18 @@ h1 {
     .descricaoinicial {
         font-size: 15px;
         margin-bottom: 30px;
-        line-height: 1.5;
     }
 
 
-    /* TÓPICOS */
+    /* CARDS */
 
     .topicoumedescricao,
     .topicodoisedescricao {
-        grid-template-columns: 50px minmax(0, 1fr);
-
-        column-gap: 10px;
+        width: 100%;
 
         padding: 12px;
+
+        column-gap: 12px;
     }
 
 
@@ -356,21 +351,23 @@ h1 {
     .topicodoisedescricao img {
         width: 45px;
         height: 45px;
+
+        flex: 0 0 45px;
     }
 
 
     /* TÍTULOS */
 
-    .topicoum,
-    .topicodois {
+    .topicoumedescricao h2,
+    .topicodoisedescricao h2 {
         font-size: 16px;
     }
 
 
     /* DESCRIÇÕES */
 
-    .descricaotopicoum,
-    .descricaotopicodois {
+    .topicoumedescricao p,
+    .topicodoisedescricao p {
         font-size: 14px;
         line-height: 1.4;
     }
@@ -381,26 +378,19 @@ h1 {
     #bnt1,
     #bnt2 {
         width: 100%;
-
         margin-left: 0;
         margin-right: 0;
 
         font-size: 18px;
-
         padding: 15px;
     }
 
 
-    /* AVISO */
-
     .aviso {
         font-size: 14px;
-
         padding-bottom: 35px;
     }
 
-
-    /* CRÉDITOS */
 
     .creditos,
     .creditos2,
@@ -410,14 +400,13 @@ h1 {
     .creditos6,
     .creditos7 {
         font-size: 14px;
-
         line-height: 1.5;
     }
 }
 
 
 /* ================================= */
-/* CELULARES MUITO PEQUENOS */
+/* CELULAR PEQUENO */
 /* ================================= */
 
 @media (max-width: 380px) {
@@ -435,44 +424,33 @@ h1 {
     }
 
 
-    /* TÓPICOS */
-
     .topicoumedescricao,
     .topicodoisedescricao {
-        grid-template-columns: 45px minmax(0, 1fr);
-
-        column-gap: 8px;
-
         padding: 10px;
+        column-gap: 10px;
     }
 
-
-    /* ÍCONES */
 
     .topicoumedescricao img,
     .topicodoisedescricao img {
         width: 40px;
         height: 40px;
+
+        flex: 0 0 40px;
     }
 
 
-    /* TÍTULOS */
-
-    .topicoum,
-    .topicodois {
+    .topicoumedescricao h2,
+    .topicodoisedescricao h2 {
         font-size: 15px;
     }
 
 
-    /* DESCRIÇÕES */
-
-    .descricaotopicoum,
-    .descricaotopicodois {
+    .topicoumedescricao p,
+    .topicodoisedescricao p {
         font-size: 13px;
     }
 
-
-    /* BOTÕES */
 
     #bnt1,
     #bnt2 {
