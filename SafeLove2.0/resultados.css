@@ -8,9 +8,6 @@ body {
     background: rgb(248, 246, 246);
 }
 
-#recomendacao {
-margin-top: 40px;
-}
 
 /* =========================================
    CONTAINER PRINCIPAL
@@ -89,9 +86,19 @@ margin-top: 40px;
 
 .titulo-ocasionou {
     color: #3F2D33;
+
     margin-top: 20px;
-    opacity: 0.9;
+    margin-bottom: 10px;
+
+    opacity: 1;
+
     line-height: 1.4;
+
+    font-size: 21px;
+
+    text-align: left;
+
+    width: 100%;
 }
 
 
@@ -100,10 +107,28 @@ margin-top: 40px;
    ========================================= */
 
 .lista-ocasionou {
-    color: #7B6C71;
-    margin-top: 20px;
+    color: #6F6267;
+
+    margin-top: 15px;
+
     margin-left: 20px;
+
     padding-left: 5px;
+
+    line-height: 1.5;
+
+    text-align: left;
+}
+
+
+/* ITEM INDIVIDUAL DA LISTA
+   caso exista essa classe no JS */
+
+.resposta-ocasionado {
+    color: #6F6267;
+
+    text-align: left;
+
     line-height: 1.5;
 }
 
@@ -114,9 +139,13 @@ margin-top: 40px;
 
 .problemas-container {
     border: 1px solid #EDE2E6;
+
     border-radius: 10px;
+
     margin-top: 40px;
+
     padding: 30px;
+
     background: #F6EEF1;
 }
 
@@ -127,8 +156,11 @@ margin-top: 40px;
 
 #resultadopainel {
     border: 2px solid rgba(113, 111, 111, 0.641);
+
     border-radius: 10px;
+
     padding: 30px;
+
     text-align: center;
 }
 
@@ -139,7 +171,9 @@ margin-top: 40px;
 
 #resultadopainel.saudavel {
     border: 2px solid #B1DFC3;
+
     background-color: #E7EEE7;
+
     color: #2FB868;
 }
 
@@ -150,7 +184,9 @@ margin-top: 40px;
 
 #resultadopainel.alerta {
     border: 2px solid #F3D5A4;
+
     background-color: #F8EBDB;
+
     color: #F3A112;
 }
 
@@ -161,8 +197,44 @@ margin-top: 40px;
 
 #resultadopainel.abusivo {
     border: 2px solid #EAADAC;
+
     background-color: #F5E0DF;
+
     color: #D92829;
+}
+
+
+/* =========================================
+   RECOMENDAÇÕES
+   ========================================= */
+
+#recomendacao {
+    margin-top: 40px;
+}
+
+
+/* Caso as recomendações usem .aviso */
+
+.aviso {
+    background: #F8EEF2;
+
+    margin-top: 20px;
+
+    border: 1px solid #E2D0D8;
+
+    padding: 18px 20px;
+
+    border-radius: 12px;
+
+    color: #66585E;
+
+    opacity: 1;
+
+    line-height: 1.5;
+
+    font-size: 17px;
+
+    text-align: center;
 }
 
 
@@ -178,36 +250,30 @@ margin-top: 40px;
     );
 
     font-weight: 400;
+
     width: 100%;
+
     border: 1px solid rgba(66, 66, 66, 0.3);
+
     padding: 12px;
+
     border-radius: 10px;
+
     cursor: pointer;
+
     font-size: 20px;
+
     margin-top: 40px;
+
     margin-bottom: 1px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     color: white;
-}
-
-
-/* =========================================
-   AVISO
-   ========================================= */
-
-.aviso {
-    background: #F6EEF1;
-    margin-top: 20px;
-    border: 1px solid #EDE2E6;
-    padding: 12px;
-    border-radius: 10px;
-    color: #3F2D33;
-    opacity: 0.9;
-    line-height: 1.4;
 }
 
 
@@ -219,69 +285,139 @@ margin-top: 40px;
 
     .resultado-container {
         width: 100%;
+
         max-width: 600px;
+
         margin: 40px auto 0;
+
         padding: 20px;
     }
+
 
     #resultadopainel {
         padding: 20px;
     }
 
+
     #imagemResultado {
         width: 90px;
+
         height: 90px;
+
         margin: 0 auto 15px;
     }
 
+
     .resultado-container h1 {
         font-size: 24px;
+
         margin-bottom: 15px;
     }
 
+
     .resultado-container p {
         font-size: 17px;
+
         margin-left: 0;
+
         margin-right: 0;
+
         line-height: 1.4;
     }
 
+
     .problemas-container {
         margin-top: 25px;
+
         padding: 20px;
     }
+
 
     .problemas-container h2 {
         font-size: 21px;
     }
 
+
     .nome-problema {
         font-size: 18px;
+
         margin-top: 22px;
     }
 
+
+    /* "O que esse problema..." */
+
     .titulo-ocasionou {
         font-size: 16px;
+
         margin-top: 15px;
+
+        margin-bottom: 10px;
+
+        text-align: left;
+
+        line-height: 1.4;
     }
+
+
+    /* LISTA */
 
     .lista-ocasionou {
         font-size: 15px;
+
         margin-top: 15px;
+
         margin-left: 15px;
+
+        padding-left: 5px;
+
+        line-height: 1.5;
+
+        text-align: left;
+    }
+
+
+    .resposta-ocasionado {
+        font-size: 15px;
+
+        text-align: left;
+
         line-height: 1.5;
     }
 
-    #voltartelainicial {
-        font-size: 18px;
-        padding: 12px;
+
+    /* RECOMENDAÇÕES */
+
+    #recomendacao {
         margin-top: 30px;
     }
 
+
     .aviso {
         font-size: 15px;
-        padding: 12px;
+
+        padding: 15px;
+
         margin-top: 20px;
+
+        color: #66585E;
+
+        opacity: 1;
+
+        line-height: 1.5;
+
+        text-align: center;
+    }
+
+
+    /* BOTÃO */
+
+    #voltartelainicial {
+        font-size: 18px;
+
+        padding: 12px;
+
+        margin-top: 30px;
     }
 }
 
@@ -294,45 +430,81 @@ margin-top: 40px;
 
     .resultado-container {
         padding: 15px;
+
         margin-top: 25px;
     }
+
 
     #resultadopainel {
         padding: 15px;
     }
 
+
     #imagemResultado {
         width: 80px;
+
         height: 80px;
     }
+
 
     .resultado-container h1 {
         font-size: 21px;
     }
 
+
     .resultado-container p {
         font-size: 16px;
     }
+
 
     .problemas-container {
         padding: 15px;
     }
 
+
     .problemas-container h2 {
         font-size: 19px;
     }
+
 
     .nome-problema {
         font-size: 17px;
     }
 
+
     .titulo-ocasionou {
-        font-size: 13px;
+        font-size: 15px;
+
+        text-align: left;
     }
+
 
     .lista-ocasionou {
         font-size: 14px;
+
+        margin-left: 12px;
+
+        text-align: left;
     }
+
+
+    .resposta-ocasionado {
+        font-size: 14px;
+
+        text-align: left;
+    }
+
+
+    .aviso {
+        font-size: 14px;
+
+        padding: 14px;
+
+        color: #66585E;
+
+        opacity: 1;
+    }
+
 
     #voltartelainicial {
         font-size: 17px;
