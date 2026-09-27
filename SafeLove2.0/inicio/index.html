@@ -1,87 +1,285 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>SafeLove</title>
-    <link rel="stylesheet" href="style.css"/>
+
+    <link rel="stylesheet" href="style.css">
+
     <script src="index.js"></script>
 
     <link rel="manifest" href="../manifest.json">
+
     <meta name="theme-color" content="#d900c0">
 
 </head>
+
 <body>
+
     <div class="menuinicio">
 
 
+        <!-- ========================= -->
+        <!-- LOGO -->
+        <!-- ========================= -->
+
         <div id="logosafelove">
-        <img src="safeloveiconesemfundo.png" alt="logo de coração">
+
+            <img
+                src="safeloveiconesemfundo.png"
+                alt="Logo do SafeLove"
+            >
+
         </div>
+
+
+        <!-- ========================= -->
+        <!-- TÍTULO -->
+        <!-- ========================= -->
 
         <h1>SafeLove</h1>
-        <p class="descricaoinicial">Reflexão e orientação sobre seu relacionamento. Anônimo, discreto e sem julgamentos.</p>
+
+
+        <!-- ========================= -->
+        <!-- DESCRIÇÃO INICIAL -->
+        <!-- ========================= -->
+
+        <p class="descricaoinicial">
+            Reflexão e orientação sobre seu relacionamento.
+            Anônimo, discreto e sem julgamentos.
+        </p>
+
+
+        <!-- ========================= -->
+        <!-- PRIMEIRO TÓPICO -->
+        <!-- ========================= -->
 
         <div class="topicoumedescricao">
-        <img src="iconetopicoum-removebg-preview.png">
-        <h2 class="topicoum">Perguntas simples</h2>
-        <p class="descricaotopicoum">Perguntas objetivas para avaliar seu relacionamento.</p>
+
+            <img
+                src="iconetopicoum-removebg-preview.png"
+                alt="Ícone de perguntas"
+            >
+
+            <div class="textotopico">
+
+                <h2 class="topicoum">
+                    Perguntas simples
+                </h2>
+
+                <p class="descricaotopicoum">
+                    Perguntas objetivas para avaliar seu relacionamento.
+                </p>
+
+            </div>
+
         </div>
+
+
+        <!-- ========================= -->
+        <!-- SEGUNDO TÓPICO -->
+        <!-- ========================= -->
 
         <div class="topicodoisedescricao">
-        <img src="iconetopicodois-removebg-preview.png">
-        <h2 class="topicodois">100% Privado</h2>
-        <p class="descricaotopicodois">Nenhum dado é coletado ou armazenado.</p>
+
+            <img
+                src="iconetopicodois-removebg-preview.png"
+                alt="Ícone de privacidade"
+            >
+
+            <div class="textotopico">
+
+                <h2 class="topicodois">
+                    100% Privado
+                </h2>
+
+                <p class="descricaotopicodois">
+                    Nenhum dado é coletado ou armazenado.
+                </p>
+
+            </div>
+
         </div>
 
-        
-        <button id="bnt1" class="bnt" onclick="avaliacaodiaria()">Avaliação Geral</button>
-        <button id="bnt2" class="bnt" onclick="avaliacaoCotidiana()">Avaliação Cotidiana</button>
-        
+
+        <!-- ========================= -->
+        <!-- BOTÃO AVALIAÇÃO GERAL -->
+        <!-- ========================= -->
+
+        <button
+            id="bnt1"
+            class="bnt"
+            type="button"
+        >
+            Avaliação Geral
+        </button>
+
+
+        <!-- ========================= -->
+        <!-- BOTÃO AVALIAÇÃO COTIDIANA -->
+        <!-- ========================= -->
+
+        <button
+            id="bnt2"
+            class="bnt"
+            type="button"
+        >
+            Avaliação Cotidiana
+        </button>
+
+
+        <!-- ========================= -->
+        <!-- NAVEGAÇÃO DAS AVALIAÇÕES -->
+        <!-- ========================= -->
 
         <script>
-document.getElementById("bnt1").addEventListener("click", function () {
 
-    localStorage.setItem("tipoAvaliacao", "geral");
+            document
+                .getElementById("bnt1")
+                .addEventListener("click", function () {
 
-    window.location.href = "../perguntas.html";
-});
+                    localStorage.setItem(
+                        "tipoAvaliacao",
+                        "geral"
+                    );
 
-document.getElementById("bnt2").addEventListener("click", function () {
+                    window.location.href =
+                        "../perguntas.html";
 
-    localStorage.setItem("tipoAvaliacao", "cotidiana");
+                });
 
-    window.location.href = "../perguntas.html";
-});
-</script>
-        
 
-        <P class="aviso">Esta ferramenta não substitui acompanhamento profissional.</P>
-        <p class="creditos">Este aplicativo foi criado por <b>Diego Hipólito Almeida Assunção</b> com o objetivo, 
-            de oferecer orientação educativa sobre relacionamentos e bem-estar emocional.
+            document
+                .getElementById("bnt2")
+                .addEventListener("click", function () {
+
+                    localStorage.setItem(
+                        "tipoAvaliacao",
+                        "cotidiana"
+                    );
+
+                    window.location.href =
+                        "../perguntas.html";
+
+                });
+
+        </script>
+
+
+        <!-- ========================= -->
+        <!-- AVISO -->
+        <!-- ========================= -->
+
+        <p class="aviso">
+            Esta ferramenta não substitui acompanhamento profissional.
         </p>
-        <p class="creditos2">Todas as informações fornecidas são de caráter educativo e não substituem aconselhamento profissional.</p>
-        <p class="creditos3">Desenvolvido por: <b>Diego Hipólito Almeida Assunção</b></p>
-        <p class="creditos4">Escola: <b>E.E.M.T.I Governador Manoel de Castro Filho</b></p>
-        <p class="creditos5">Cidade: <b>Quixeré</b></p>
-        <p class="creditos6">Versão: <b>2.0</b></p>
-        <p class="creditos7">Projeto do Ceará Científico 2026</p>
+
+
+        <!-- ========================= -->
+        <!-- CRÉDITOS -->
+        <!-- ========================= -->
+
+        <p class="creditos">
+
+            Este aplicativo foi criado por
+            <b>Diego Hipólito Almeida Assunção</b>
+            com o objetivo, de oferecer orientação educativa
+            sobre relacionamentos e bem-estar emocional.
+
+        </p>
+
+
+        <p class="creditos2">
+
+            Todas as informações fornecidas são de caráter educativo
+            e não substituem aconselhamento profissional.
+
+        </p>
+
+
+        <p class="creditos3">
+
+            Desenvolvido por:
+            <b>Diego Hipólito Almeida Assunção</b>
+
+        </p>
+
+
+        <p class="creditos4">
+
+            Escola:
+            <b>E.E.M.T.I Governador Manoel de Castro Filho</b>
+
+        </p>
+
+
+        <p class="creditos5">
+
+            Cidade:
+            <b>Quixeré</b>
+
+        </p>
+
+
+        <p class="creditos6">
+
+            Versão:
+            <b>2.0</b>
+
+        </p>
+
+
+        <p class="creditos7">
+
+            Projeto do Ceará Científico 2026
+
+        </p>
+
+
+        <!-- ========================= -->
+        <!-- SERVICE WORKER / PWA -->
+        <!-- ========================= -->
 
         <script>
-if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-        navigator.serviceWorker.register("../sw.js")
-            .then(() => {
-                console.log("SafeLove PWA instalado.");
-            })
-            .catch(erro => {
-                console.error("Erro no Service Worker:", erro);
-            });
-    });
-}
-</script>
+
+            if ("serviceWorker" in navigator) {
+
+                window.addEventListener("load", () => {
+
+                    navigator.serviceWorker
+                        .register("../sw.js")
+
+                        .then(() => {
+
+                            console.log(
+                                "SafeLove PWA instalado."
+                            );
+
+                        })
+
+                        .catch(erro => {
+
+                            console.error(
+                                "Erro no Service Worker:",
+                                erro
+                            );
+
+                        });
+
+                });
+
+            }
+
+        </script>
 
 
     </div>
+
 </body>
+
 </html>
