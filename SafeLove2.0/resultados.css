@@ -211,27 +211,28 @@ body {
     margin-top: 40px;
 }
 
-
 /* Caso as recomendações usem .aviso */
 
 .aviso {
-    background: #F8EEF2;
+    background: #FFF0F6;
 
     margin-top: 20px;
 
-    border: 1px solid #E2D0D8;
+    border: 2px solid #E8A3C1;
 
     padding: 18px 20px;
 
     border-radius: 12px;
 
-    color: #6F6267;
+    color: #7A2850;
 
     line-height: 1.5;
 
     font-size: 17px;
 
     text-align: center;
+
+    box-shadow: 0 4px 12px rgba(180, 70, 120, 0.12);
 }
 
 
