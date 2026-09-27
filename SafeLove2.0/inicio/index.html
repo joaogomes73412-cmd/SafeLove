@@ -39,19 +39,21 @@
         <button id="bnt2" class="bnt" onclick="avaliacaoCotidiana()">Avaliação Cotidiana</button>
         
 
-        <script> 
+        <script>
+document.getElementById("bnt1").addEventListener("click", function () {
 
-        document.getElementById("bnt2").addEventListener("click", function () {
+    localStorage.setItem("tipoAvaliacao", "geral");
+
+    window.location.href = "../perguntas.html";
+});
+
+document.getElementById("bnt2").addEventListener("click", function () {
+
     localStorage.setItem("tipoAvaliacao", "cotidiana");
 
     window.location.href = "../perguntas.html";
 });
-    
-        function avaliacaodiaria() {
-        window.location.href = "../perguntas.html"
-    
-}
-        </script>
+</script>
         
 
         <P class="aviso">Esta ferramenta não substitui acompanhamento profissional.</P>
