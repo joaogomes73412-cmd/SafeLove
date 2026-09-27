@@ -19,7 +19,11 @@ body {
     padding: 30px 25px;
 }
 
+
+/* ========================= */
 /* LOGO */
+/* ========================= */
+
 #logosafelove {
     display: block;
     width: 140px;
@@ -27,7 +31,17 @@ body {
     margin: 0 auto 10px;
 }
 
+#logosafelove img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ========================= */
 /* TÍTULO */
+/* ========================= */
+
 h1 {
     text-align: center;
     color: rgb(217, 0, 192);
@@ -37,7 +51,11 @@ h1 {
     font-weight: 300;
 }
 
-/* DESCRIÇÃO */
+
+/* ========================= */
+/* DESCRIÇÃO INICIAL */
+/* ========================= */
+
 .descricaoinicial {
     text-align: center;
     color: rgba(66, 66, 66, 0.6);
@@ -50,129 +68,185 @@ h1 {
     line-height: 1.6;
 }
 
-/* PRIMEIRO BLOCO */
-.topicoumedescricao {
-    border: 1px solid rgba(71, 70, 71, 0.3);
-    border-radius: 15px;
-    padding: 10px;
-    margin: 5px 0 10px;
-    background-color: white;
 
-    display: grid;
-    grid-template-columns: 60px 1fr;
-    column-gap: 15px;
-    align-items: center;
-}
+/* ========================= */
+/* BLOCOS DOS TÓPICOS */
+/* ========================= */
 
-/* ÍCONE DO PRIMEIRO BLOCO */
-.topicoumedescricao img {
-    width: 55px;
-    max-width: 100%;
-    margin: 0 auto;
-    display: block;
-}
-
-/* TÍTULO DO PRIMEIRO BLOCO */
-.topicoum {
-    margin: 0;
-    font-size: 17px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 544;
-}
-
-/* DESCRIÇÃO DO PRIMEIRO BLOCO */
-.descricaotopicoum {
-    margin: 4px 0 0;
-    font-size: 15px;
-    color: rgba(66, 66, 66, 0.6);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    line-height: 1.4;
-}
-
-/* SEGUNDO BLOCO */
+.topicoumedescricao,
 .topicodoisedescricao {
+    width: 100%;
     border: 1px solid rgba(71, 70, 71, 0.3);
     border-radius: 15px;
-    padding: 10px;
-    margin: 19px 0 50px;
+    padding: 15px;
     background-color: white;
 
     display: grid;
-    grid-template-columns: 60px 1fr;
+
+    /* Ícone + título */
+    grid-template-columns: 60px minmax(0, 1fr);
+
+    /* Linha do título + linha da descrição */
+    grid-template-rows: auto auto;
+
     column-gap: 15px;
+    row-gap: 6px;
+
     align-items: center;
 }
 
-/* ÍCONE DO SEGUNDO BLOCO */
+
+/* ========================= */
+/* PRIMEIRO BLOCO */
+/* ========================= */
+
+.topicoumedescricao {
+    margin: 5px 0 10px;
+}
+
+
+/* ========================= */
+/* SEGUNDO BLOCO */
+/* ========================= */
+
+.topicodoisedescricao {
+    margin: 19px 0 50px;
+}
+
+
+/* ========================= */
+/* ÍCONES */
+/* ========================= */
+
+.topicoumedescricao img,
 .topicodoisedescricao img {
     width: 55px;
-    max-width: 100%;
-    margin: 0 auto;
+    height: 55px;
+    object-fit: contain;
+
+    grid-column: 1;
+    grid-row: 1;
+
     display: block;
+    margin: 0 auto;
 }
 
-/* TÍTULO DO SEGUNDO BLOCO */
+
+/* ========================= */
+/* TÍTULOS DOS TÓPICOS */
+/* ========================= */
+
+.topicoum,
 .topicodois {
     margin: 0;
+
+    grid-column: 2;
+    grid-row: 1;
+
     font-size: 17px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 544;
+
+    min-width: 0;
 }
 
-/* DESCRIÇÃO DO SEGUNDO BLOCO */
+
+/* ========================= */
+/* DESCRIÇÕES DOS TÓPICOS */
+/* ========================= */
+
+.descricaotopicoum,
 .descricaotopicodois {
-    margin: 4px 0 0;
+    margin: 0;
+
+    /* Ocupa as duas colunas */
+    grid-column: 1 / -1;
+    grid-row: 2;
+
+    width: 100%;
+    min-width: 0;
+
     font-size: 15px;
     color: rgba(66, 66, 66, 0.6);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
-    line-height: 1.4;
+
+    line-height: 1.5;
+
+    text-align: left;
+
+    /* Evita que palavras sejam cortadas */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
+
+/* ========================= */
 /* BOTÕES */
+/* ========================= */
+
 #bnt1,
 #bnt2 {
     width: 90%;
     margin: 10px 5%;
     padding: 16px;
+
     text-align: center;
+
     border-radius: 20px;
     cursor: pointer;
+
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
 }
 
+
 /* BOTÃO PRINCIPAL */
+
 #bnt1 {
     background: linear-gradient(
         to left,
         rgb(181, 0, 222),
         rgb(239, 0, 139)
     );
+
     color: white;
     border: transparent;
 }
 
+
 /* BOTÃO SECUNDÁRIO */
+
 #bnt2 {
     background: rgb(252, 252, 252);
     color: rgb(4, 3, 3);
     border: 3px solid #ff6abc68;
 }
 
+
+/* ========================= */
 /* AVISO */
+/* ========================= */
+
 .aviso {
     text-align: center;
     margin: 20px 0;
+
     color: rgba(66, 66, 66, 0.7);
+
     border-bottom: 1px solid rgba(66, 66, 66, 0.6);
+
     padding-bottom: 50px;
+
     line-height: 1.5;
 }
 
+
+/* ========================= */
 /* CRÉDITOS */
+/* ========================= */
+
 .creditos,
 .creditos2,
 .creditos3,
@@ -204,12 +278,21 @@ h1 {
 
 .creditos7 {
     margin: 0 0 1px;
-    background: linear-gradient(to left, #ee0197, #dd00f6);
+
+    background: linear-gradient(
+        to left,
+        #ee0197,
+        #dd00f6
+    );
+
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+
+/* NOMES EM NEGRITO */
 
 .creditos b,
 .creditos2 b,
@@ -233,55 +316,93 @@ h1 {
         margin-top: 30px;
     }
 
+
+    /* LOGO */
+
     #logosafelove {
         width: 120px;
     }
+
+
+    /* TÍTULO */
 
     h1 {
         font-size: 30px;
         line-height: 1.2;
     }
 
+
+    /* DESCRIÇÃO */
+
     .descricaoinicial {
         font-size: 15px;
         margin-bottom: 30px;
+        line-height: 1.5;
     }
+
+
+    /* TÓPICOS */
 
     .topicoumedescricao,
     .topicodoisedescricao {
-        grid-template-columns: 50px 1fr;
-        column-gap: 10px;
-        padding: 10px;
+        padding: 15px;
+
+        grid-template-columns: 50px minmax(0, 1fr);
+
+        column-gap: 12px;
+        row-gap: 6px;
     }
+
+
+    /* ÍCONES */
 
     .topicoumedescricao img,
     .topicodoisedescricao img {
         width: 45px;
+        height: 45px;
     }
+
+
+    /* TÍTULOS */
 
     .topicoum,
     .topicodois {
         font-size: 16px;
+        line-height: 1.3;
     }
+
+
+    /* DESCRIÇÕES */
 
     .descricaotopicoum,
     .descricaotopicodois {
         font-size: 14px;
+        line-height: 1.5;
     }
+
+
+    /* BOTÕES */
 
     #bnt1,
     #bnt2 {
         width: 100%;
         margin-left: 0;
         margin-right: 0;
+
         font-size: 18px;
         padding: 15px;
     }
+
+
+    /* AVISO */
 
     .aviso {
         font-size: 14px;
         padding-bottom: 35px;
     }
+
+
+    /* CRÉDITOS */
 
     .creditos,
     .creditos2,
@@ -291,11 +412,14 @@ h1 {
     .creditos6,
     .creditos7 {
         font-size: 14px;
+        line-height: 1.5;
     }
 }
 
 
+/* ================================= */
 /* CELULARES MUITO PEQUENOS */
+/* ================================= */
 
 @media (max-width: 380px) {
 
@@ -303,34 +427,56 @@ h1 {
         padding: 20px 12px;
     }
 
+
     h1 {
         font-size: 27px;
     }
+
 
     .descricaoinicial {
         font-size: 14px;
     }
 
+
+    /* TÓPICOS */
+
     .topicoumedescricao,
     .topicodoisedescricao {
-        grid-template-columns: 45px 1fr;
-        column-gap: 8px;
+        padding: 13px;
+
+        grid-template-columns: 45px minmax(0, 1fr);
+
+        column-gap: 10px;
     }
+
+
+    /* ÍCONES */
 
     .topicoumedescricao img,
     .topicodoisedescricao img {
         width: 40px;
+        height: 40px;
     }
+
+
+    /* TÍTULOS */
 
     .topicoum,
     .topicodois {
         font-size: 15px;
     }
 
+
+    /* DESCRIÇÕES */
+
     .descricaotopicoum,
     .descricaotopicodois {
         font-size: 13px;
+        line-height: 1.5;
     }
+
+
+    /* BOTÕES */
 
     #bnt1,
     #bnt2 {
