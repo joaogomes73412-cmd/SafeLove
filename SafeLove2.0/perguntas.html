@@ -46,38 +46,18 @@
 
 <script>
 
-    document.addEventListener("DOMContentLoaded", function () {
-
     const tipoAvaliacao = localStorage.getItem("tipoAvaliacao");
 
-    const tituloPagina = document.getElementById("tituloPagina");
-    const subtituloPagina = document.getElementById("subtituloPagina");
+const tituloPagina = document.getElementById("tituloPagina");
+const subtituloPagina = document.getElementById("subtituloPagina");
 
-    if (tipoAvaliacao === "cotidiana") {
+if (tipoAvaliacao === "cotidiana") {
 
-        tituloPagina.textContent =
-            "Como está seu relacionamento ultimamente?";
+    tituloPagina.textContent =
+        "Como está seu relacionamento ultimamente?";
 
-        subtituloPagina.textContent =
-            "Responda de acordo com o que você tem vivenciado.";
-
-    } else {
-
-        tituloPagina.textContent =
-            "Qual ou Quais foram os principais desafios enfrentados em seu relacionamento?";
-
-        subtituloPagina.textContent =
-            "Selecione quantas opções quiser.";
-    }
-});
-
-    document.getElementById("avaliacaoGeral").addEventListener("click", function () {
-
-    localStorage.setItem("tipoAvaliacao", "geral");
-
-    window.location.href = "../perguntas.html";
-});
-
+    subtituloPagina.textContent =
+        "Fassa uma auto analise mensalmente de acordo com o que você está vivenciado.";
 }
 
     const opcoes = document.querySelectorAll('.opcao-desafio');
