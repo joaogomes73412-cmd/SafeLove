@@ -57,6 +57,7 @@ body {
 
 #telaQuestionario #alternativasQuestionario button {
     background: white;
+    background-color: white;
     font-weight: 400;
     width: 100%;
     border: 1px solid rgba(66, 66, 66, 0.3);
