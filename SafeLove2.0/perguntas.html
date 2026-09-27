@@ -71,6 +71,13 @@
     }
 });
 
+    document.getElementById("avaliacaoGeral").addEventListener("click", function () {
+
+    localStorage.setItem("tipoAvaliacao", "geral");
+
+    window.location.href = "../perguntas.html";
+});
+
 }
 
     const opcoes = document.querySelectorAll('.opcao-desafio');
