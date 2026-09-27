@@ -2,143 +2,335 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
     background: rgb(248, 246, 246);
 }
 
-#imagemResultado {
-    width: 100px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-left: 175px;
-}
 
-h1 {
-align-items: center;
-justify-content: center;
-margin-left: 50px;
-margin-bottom: 20px;
-}
-
-p {
-align-items: center;
-justify-content: center;
-opacity: 0.5;
-margin-left: 10px;
-margin-right: 20px;
-margin-top: 6px;
-font-size: 21px;
-}
+/* =========================================
+   CONTAINER PRINCIPAL
+   ========================================= */
 
 .resultado-container {
-            background: rgb(248, 246, 246);;
-            width: 90%;
-            max-width: 600px;
-            margin: 100px auto 0;
-            padding: 40px;
+    background: rgb(248, 246, 246);
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    padding: 40px;
 }
 
-h2 {
+
+/* =========================================
+   IMAGEM DO RESULTADO
+   ========================================= */
+
+#imagemResultado {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+
+/* =========================================
+   TÍTULO
+   ========================================= */
+
+.resultado-container h1 {
+    text-align: center;
+    margin: 0 auto 20px;
+    line-height: 1.3;
+}
+
+
+/* =========================================
+   DESCRIÇÃO
+   ========================================= */
+
+.resultado-container p {
+    text-align: center;
+    opacity: 0.5;
+    margin: 6px auto 20px;
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   TÍTULO DOS PROBLEMAS
+   ========================================= */
+
+.problemas-container h2 {
     color: #716167;
-    gap: 10px;
-    }
+    margin: 0;
+}
+
+
+/* =========================================
+   NOME DO PROBLEMA
+   ========================================= */
 
 .nome-problema {
     color: #D75680;
     margin-top: 26px;
+    line-height: 1.3;
 }
 
 
-.lista-ocasionou {
-    color: #7B6C71;
-    margin-top: 20px;
-    margin-left: 15px;
-}
+/* =========================================
+   TÍTULO "O QUE OCASIONOU"
+   ========================================= */
 
 .titulo-ocasionou {
     color: #3F2D33;
     margin-top: 20px;
     opacity: 0.9;
+    line-height: 1.4;
 }
 
+
+/* =========================================
+   LISTA DE CONSEQUÊNCIAS
+   ========================================= */
+
+.lista-ocasionou {
+    color: #7B6C71;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 5px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   CAIXA DOS PROBLEMAS
+   ========================================= */
+
 .problemas-container {
-    border: 2px solid rgba(113, 111, 111, 0.641);
+    border: 1px solid #EDE2E6;
     border-radius: 10px;
     margin-top: 40px;
     padding: 30px;
-    align-items: center;
-    justify-content: center;
     background: #F6EEF1;
-    border: 1px solid #EDE2E6;
-    gap: 5px;
 }
+
+
+/* =========================================
+   PAINEL DO RESULTADO
+   ========================================= */
 
 #resultadopainel {
     border: 2px solid rgba(113, 111, 111, 0.641);
     border-radius: 10px;
-    padding: 2px;
-    align-items: center;
-    justify-content: center;
+    padding: 30px;
+    text-align: center;
 }
+
+
+/* =========================================
+   RESULTADO SAUDÁVEL
+   ========================================= */
 
 #resultadopainel.saudavel {
     border: 2px solid #B1DFC3;
-    border-radius: 10px;
-    padding: 30px;
-    align-items: center;
-    justify-content: center;
     background-color: #E7EEE7;
     color: #2FB868;
 }
+
+
+/* =========================================
+   RESULTADO EM ALERTA
+   ========================================= */
 
 #resultadopainel.alerta {
     border: 2px solid #F3D5A4;
     background-color: #F8EBDB;
     color: #F3A112;
-    border-radius: 10px;
-    padding: 30px;
-    align-items: center;
-    justify-content: center;
 }
+
+
+/* =========================================
+   RESULTADO ABUSIVO
+   ========================================= */
 
 #resultadopainel.abusivo {
     border: 2px solid #EAADAC;
     background-color: #F5E0DF;
     color: #D92829;
-    border-radius: 10px;
-    padding: 30px;
-    align-items: center;
-    justify-content: center;
 }
 
+
+/* =========================================
+   BOTÃO VOLTAR
+   ========================================= */
+
 #voltartelainicial {
-    background: linear-gradient(to left, rgb(181, 0, 222, 0.9), rgb(239, 0, 139, 0.9));
-    font-weight: 10;
+    background: linear-gradient(
+        to left,
+        rgba(181, 0, 222, 0.9),
+        rgba(239, 0, 139, 0.9)
+    );
+
+    font-weight: 400;
     width: 100%;
-    border: 1px solid rgb(66, 66, 66, 0.3);
-    padding: 10px;
+    border: 1px solid rgba(66, 66, 66, 0.3);
+    padding: 12px;
     border-radius: 10px;
     cursor: pointer;
     font-size: 20px;
     margin-top: 40px;
     margin-bottom: 1px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     color: white;
 }
+
+
+/* =========================================
+   AVISO
+   ========================================= */
 
 .aviso {
     background: #F6EEF1;
     margin-top: 20px;
     border: 1px solid #EDE2E6;
-    padding: 8px;
+    padding: 12px;
     border-radius: 10px;
     color: #3F2D33;
     opacity: 0.9;
+    line-height: 1.4;
+}
 
+
+/* =========================================
+   CELULAR
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .resultado-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 40px auto 0;
+        padding: 20px;
+    }
+
+    #resultadopainel {
+        padding: 20px;
+    }
+
+    #imagemResultado {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 15px;
+    }
+
+    .resultado-container h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .resultado-container p {
+        font-size: 17px;
+        margin-left: 0;
+        margin-right: 0;
+        line-height: 1.4;
+    }
+
+    .problemas-container {
+        margin-top: 25px;
+        padding: 20px;
+    }
+
+    .problemas-container h2 {
+        font-size: 21px;
+    }
+
+    .nome-problema {
+        font-size: 18px;
+        margin-top: 22px;
+    }
+
+    .titulo-ocasionou {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .lista-ocasionou {
+        font-size: 15px;
+        margin-top: 15px;
+        margin-left: 15px;
+        line-height: 1.5;
+    }
+
+    #voltartelainicial {
+        font-size: 18px;
+        padding: 12px;
+        margin-top: 30px;
+    }
+
+    .aviso {
+        font-size: 15px;
+        padding: 12px;
+    }
+}
+
+
+/* =========================================
+   CELULARES PEQUENOS
+   ========================================= */
+
+@media (max-width: 380px) {
+
+    .resultado-container {
+        padding: 15px;
+        margin-top: 25px;
+    }
+
+    #resultadopainel {
+        padding: 15px;
+    }
+
+    #imagemResultado {
+        width: 80px;
+        height: 80px;
+    }
+
+    .resultado-container h1 {
+        font-size: 21px;
+    }
+
+    .resultado-container p {
+        font-size: 16px;
+    }
+
+    .problemas-container {
+        padding: 15px;
+    }
+
+    .problemas-container h2 {
+        font-size: 19px;
+    }
+
+    .nome-problema {
+        font-size: 17px;
+    }
+
+    .titulo-ocasionou {
+        font-size: 15px;
+    }
+
+    .lista-ocasionou {
+        font-size: 14px;
+    }
+
+    #voltartelainicial {
+        font-size: 17px;
+    }
 }
