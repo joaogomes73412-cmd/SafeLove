@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeLove</title>
+    <link rel="stylesheet" href="avaliecomoesta.css"/>
+</head>
+<body>
+    <div class="seurelacionamentoesta">
+
+        <h1>Escolha uma opção para classificar como está se sentindo no seu relacionamento:</h1>
+        <p class="descricaoinicial">Selecione a opção que melhor representa como você se sente.</p>
+
+        <div class="opcoesemoji">
+
+<button class="bntf" id="bnt01">😊 Estou feliz, respeitado(a) e valorizado(a) no relacionamento</button>
+<button class="bntf" id="bnt02">🕊️ Sinto liberdade para ser eu mesmo(a) e tomar minhas próprias decisões.</button>
+<button class="bntf" id="bnt03">💬 Existe diálogo, confiança e respeito entre nós.</button>
+<button class="bntf" id="bnt04">🤝 Sinto que existe parceria, carinho e apoio mútuo.</button>
+<button class="bntf" id="bnt05">🛡️ Sinto-me seguro(a) e confortável ao lado do meu parceiro(a).</Button>
+<button class="bntf" id="bnt06">😕 Alguns comportamentos do relacionamento estão começando a me incomodar.</Button>
+<button class="bntf" id="bnt07">😣 Temos discussões frequentes e dificuldade para resolver alguns conflitos.</Button>
+<button class="bntf" id="bnt08">😔 Às vezes sinto que minhas opiniões ou sentimentos não são valorizados.</Button>
+<Button class="bntf" id="bnt09">⚠️ Percebo comportamentos de ciúme, controle ou desrespeito.</Button>
+<Button class="bntf" id="bnt10">😟 Sinto-me emocionalmente cansado(a), inseguro(a) ou desconfortável em alguns momentos.</Button>
+<Button class="bntf" id="bnt11">😨 Sinto medo das reações do meu parceiro(a) ou de suas atitudes comigo.</Button>
+<Button class="bntf" id="bnt12">🔒 Meu parceiro(a) controla minha liberdade, decisões, amizades ou rotina.</Button>
+<Button class="bntf" id="bnt13">💔 Sou frequentemente humilhado(a), ameaçado(a), insultado(a) ou desvalorizado(a).</Button>
+<Button class="bntf" id="bnt14">🚫 Meus limites, minha vontade e minha privacidade não são respeitados.</Button>
+<Button class="bntf" id="bnt15">🆘 Sinto que o relacionamento está prejudicando minha segurança, liberdade ou bem-estar.</Button>
+
+<button type="buttonf" id="proximoQuestionariof">
+        Proxímo
+    </button>
+
+    </div>
+
+    </div>
+
+    <script>
+
+    const opcoes = document.querySelectorAll(".bntf");
+const proximo = document.getElementById("proximoQuestionariof");
+
+let opcaoSelecionada = null;
+
+opcoes.forEach((opcao, index) => {
+
+    opcao.addEventListener("click", () => {
+
+        // Remove seleção anterior
+        opcoes.forEach(item => {
+            item.classList.remove("selecionado");
+        });
+
+        // Seleciona somente a opção clicada
+        opcao.classList.add("selecionado");
+
+        // Guarda o índice da opção
+        opcaoSelecionada = index;
+
+        // Ativa o botão Próximo
+        proximo.classList.add("ativo");
+    });
+
+});
+
+proximo.addEventListener("click", () => {
+
+    if (opcaoSelecionada === null) {
+        return;
+    }
+
+    let resultado;
+
+    // 1 a 5
+    if (opcaoSelecionada <= 4) {
+        resultado = "saudavel";
+    }
+
+    // 6 a 10
+    else if (opcaoSelecionada <= 9) {
+        resultado = "alerta";
+    }
+
+    // 11 a 15
+    else {
+        resultado = "abusivo";
+    }
+
+    // Salva o resultado
+    localStorage.setItem("resultadoRelacionamento", resultado);
+
+    // Vai para outro arquivo
+    window.location.href = "resultado.html";
+});
+
+</script>

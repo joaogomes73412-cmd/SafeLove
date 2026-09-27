@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: rgb(248, 246, 246);
+}
+
+#imagemResultado {
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 175px;
+}
+
+h1 {
+align-items: center;
+justify-content: center;
+margin-left: 50px;
+margin-bottom: 20px;
+}
+
+p {
+align-items: center;
+justify-content: center;
+opacity: 0.5;
+margin-left: 10px;
+margin-right: 20px;
+margin-top: 6px;
+font-size: 21px;
+}
+
+.resultado-container {
+            background: rgb(248, 246, 246);;
+            width: 90%;
+            max-width: 600px;
+            margin: 100px auto 0;
+            padding: 40px;
+}
+
+h2 {
+    color: #716167;
+    gap: 10px;
+    }
+
+.nome-problema {
+    color: #D75680;
+    margin-top: 26px;
+}
+
+
+.lista-ocasionou {
+    color: #7B6C71;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.titulo-ocasionou {
+    color: #3F2D33;
+    margin-top: 20px;
+    opacity: 0.9;
+}
+
+.problemas-container {
+    border: 2px solid rgba(113, 111, 111, 0.641);
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    background: #F6EEF1;
+    border: 1px solid #EDE2E6;
+    gap: 5px;
+}
+
+#resultadopainel {
+    border: 2px solid rgba(113, 111, 111, 0.641);
+    border-radius: 10px;
+    padding: 2px;
+    align-items: center;
+    justify-content: center;
+}
+
+#resultadopainel.saudavel {
+    border: 2px solid #B1DFC3;
+    border-radius: 10px;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: #E7EEE7;
+    color: #2FB868;
+}
+
+#resultadopainel.alerta {
+    border: 2px solid #F3D5A4;
+    background-color: #F8EBDB;
+    color: #F3A112;
+    border-radius: 10px;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+#resultadopainel.abusivo {
+    border: 2px solid #EAADAC;
+    background-color: #F5E0DF;
+    color: #D92829;
+    border-radius: 10px;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+#voltartelainicial {
+    background: linear-gradient(to left, rgb(181, 0, 222, 0.9), rgb(239, 0, 139, 0.9));
+    font-weight: 10;
+    width: 100%;
+    border: 1px solid rgb(66, 66, 66, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.aviso {
+    background: #F6EEF1;
+    margin-top: 20px;
+    border: 1px solid #EDE2E6;
+    padding: 8px;
+    border-radius: 10px;
+    color: #3F2D33;
+    opacity: 0.9;
+
+}

@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+img {
+    cursor: pointer;
+}
+
+
+body {
+    background: rgb(248, 246, 246);
+}
+
+.selecionaralternativas {
+            background: rgb(248, 246, 246);;
+            width: 90%;
+            max-width: 600px;
+            margin: 100px auto 0;
+            padding: 40px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-top: 1px solid black;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgb(66, 66, 66, 0.7);
+}
+
+.opcao-desafio {
+    background: rgb(252, 252, 252);
+    font-weight: 10;
+    width: 100%;
+    border: 1px solid rgb(66, 66, 66, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 1px;
+    display: flex;
+    
+}
+
+.avancar {
+    background: linear-gradient(to left, rgb(181, 0, 222, 0.5), rgb(239, 0, 139, 0.5));
+    font-weight: 10;
+    width: 100%;
+    border: 1px solid rgb(66, 66, 66, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.opcao-desafio.selecionada {
+    background-color: #ff60d737;
+    border: 1px solid rgb(255, 3, 133, 0.5);
+}
+
+.avancar.ativo {
+    background: linear-gradient(to left, rgb(181, 0, 222, 0.9), rgb(239, 0, 139, 0.9));
+}
